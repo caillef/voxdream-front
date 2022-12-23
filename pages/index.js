@@ -12,7 +12,7 @@ const Home = () => {
     setIsGenerating(true);
     
     console.log("Calling OpenAI...")
-    const response = await fetch('/api/generate', {
+    const response = await fetch('https://api.voxdream.art/pixelart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
