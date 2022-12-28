@@ -15,7 +15,7 @@ body {
     gap: 10px;
     height: 100vh;
     overflow: auto;
-    padding: 0px;
+    padding: 10px;
     position: relative;
 }
 
@@ -32,7 +32,7 @@ body {
     padding: 50px;
     position: relative;
     width: auto;
-    gap: 64px;
+    gap: 32px;
 }
 
 .header {    
@@ -67,15 +67,16 @@ body {
 }
 
 .prompt-container {
-    /* place-content: flex-end center; */
+    place-content: flex-end center;
     align-items: center;
+    flex: 0 0 auto;
     display: flex;
     flex: 0 0 auto;
-    /* flex-flow: row wrap; */
+    flex-flow: row wrap;
     gap: 16px;
     height: min-content;
     padding: 0px;
-    width: min-content;
+    width: 500px;
 }
 
 .prompt-box {
@@ -85,19 +86,19 @@ body {
     border-right-width: 1px;
     border-style: solid;
     border-top-width: 1px;
-    place-content: flex-start;
-    align-items: flex-start;
+    /* place-content: flex-start; */
+    /* align-items: flex-start; */
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     display: flex;
-    flex: 0 0 auto;
+    /* flex: 0 0 auto; */
     /* flex-flow: column nowrap; */
     gap: 10px;
     height: 30px;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 20px;
     position: relative;
-    width: 410px;
+    width: min-content;
     max-width: 1200px;
     will-change: transform;
     overflow: auto;
@@ -111,6 +112,7 @@ body {
     color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     text-transform: none;
+    width: 400px;
 }
 
 textarea {
@@ -124,17 +126,15 @@ textarea {
 
 
 .prompt-buttons {
-    /* display: flex; */
-    /* place-content: center; */
-    /* align-items: center; */
-    /* justify-content: flex-end; */
-    /* flex: 0 0 auto; */
-    /* flex-flow: row nowrap; */
-    gap: 12px;
+    /* gap: 12px; */
+    display: flex;
     height: min-content;
-    overflow: hidden;
-    padding: 0px;
-    position: relative;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0px; */
+    /* position: relative; */
     width: 100%;
 }
 
@@ -170,22 +170,33 @@ textarea {
 }
 
 .generate-button {
-    place-content: flex-start;
-    align-items: flex-start;
+    /* place-content: flex-start; */
+    /* align-items: center; */
     background-color: rgb(31, 109, 55);
-    border-radius: 100px;
+    /* border-radius: 100px; */
     display: flex;
+    /* flex-direction: column; */
     flex: 0 0 auto;
     flex-flow: row wrap;
     gap: 10px;
-    height: min-content;
-    overflow: hidden;
+    /* height: min-content; */
     padding: 16px 24px;
-    position: relative;
-    text-decoration: none;
+    /* position: relative; */
+    /* text-decoration: none; */
     width: min-content;
-    will-change: transform;
-    cursor: pointer;
+    margin: 5px
+    /* will-change: transform; */
+    /* cursor: pointer; */
+}
+
+#voxelart {
+    margin-top: 5px;
+    background-color: rgb(14, 118, 144);
+}
+
+#voxelart3d {
+    margin-top: 5px;
+    background-color: rgb(122, 122, 122);
 }
 
 .generate {
@@ -193,13 +204,14 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 90px;
     flex-shrink: 0;
     transform: none;
 }
 
 .generate p {
     color: rgb(255, 255, 255);
-    margin: 0;
+    margin: auto;
 }
 
 .loading {
@@ -277,7 +289,6 @@ textarea {
     gap: 10px;
     height: min-content;
     max-width: 1200px;
-    overflow: hidden;
     position: relative;
     width: 100%;
 }
